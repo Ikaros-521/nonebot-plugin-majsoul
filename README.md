@@ -28,6 +28,33 @@ _✨ 雀魂信息查询插件 ✨_
 
 支持适配器：Onebot V11
 
+## 安装
+python版本：3.8.13  
+使用pip分别独立安装对应版本的依赖库  
+```
+nonebot2 = "^2.0.0b5"
+nonebot-adapter-onebot = "^2.1.5"
+tzlocal = "^4.2"
+httpx = "^0.23.0"
+pydantic = "^1.10.2"
+monthdelta = "^0.9.1"
+icmplib = "^3.0.3"
+matplotlib = "^3.6.2"
+typing-extensions = "^4.4.0"
+```
+使用git命令clone项目至本地`https://github.com/Ikaros-521/nonebot-plugin-majsoul.git`  
+然后仅拷贝`nonebot-plugin-majsoul/src/nonebot_plugin_majsoul`文件夹至python安装路径下的`\Lib\site-packages\`目录下。  
+打开 nonebot2 项目的 ```bot.py``` 文件, 在其中写入  
+```nonebot.load_plugin('nonebot_plugin_majsoul')```  
+当然，如果是默认nb-cli创建的nonebot2的话，在bot路径```pyproject.toml```的```[tool.nonebot]```的```plugins```中添加```nonebot_plugin_majsoul```即可  
+pyproject.toml配置例如：  
+``` 
+[tool.nonebot]
+plugin_dirs = ["src/plugins"]
+plugins = ["nonebot_plugin_majsoul"]
+``` 
+
+
 ## 功能
 
 ### 雀魂牌谱屋
